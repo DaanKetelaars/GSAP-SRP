@@ -65,6 +65,20 @@
             text-decoration: none;
             z-index: 10;
         }
+
+        /* Tweening Basics - CSS */
+        .box-yellow {
+            background-color: goldenrod;
+            width: 200px;
+            height: 100px;
+        }
+
+        .box-red {
+            background-color: red;
+            width: 200px;
+            height: 200px;
+            border-radius: 100%;
+        }
     </style>
 </head>
 
@@ -74,11 +88,13 @@
         <h1>Getting Started With <span>GSAP.</span></h1>
         <p>Starting file with the basics of GSAP.</p>
         <br>
-        <p>Daan Ketelaars - SRP - Docent: Robert Spier</p>
+        <p style="margin-top: 3rem;">Daan Ketelaars - SRP - Docent: Robert Spier</p>
     </header>
     <main>
         <section>
             <h2>Tweening Basics</h2>
+            <div class="box-yellow"></div>
+            <div class="box-red"></div>
         </section>
         <section>
             <h2>CSS Plugin</h2>
@@ -112,6 +128,20 @@
 
     </footer>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.6.1/gsap.min.js"></script>
+    <script>
+        gsap.to(".box-yellow", {
+            duration: 1,
+            x: 100,
+            y: 75,
+            scale: 2
+        });
+        gsap.to(".box-red", {
+            duration: 1,
+            x: 500,
+            y: -75,
+            scale: 0.75
+        });
+    </script>
 
 </body>
 
